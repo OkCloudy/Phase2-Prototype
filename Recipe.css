@@ -1,0 +1,26 @@
+html {
+    font-size: 14px;
+}
+
+.sugg_recipes {
+    border: .1rem solid black;
+    text-align: center;
+    width: 50rem;
+    margin-left: 22rem;
+    margin-top: 10rem;
+}
+
+.sugg_recipes img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.box {
+    display: inline-block;
+    padding: 1rem;
+    text-align: left;
+    border: .1rem solid black;
+    position: relative;
+    top: 20rem;
+    left: 30rem;
+}
