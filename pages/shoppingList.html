@@ -9,17 +9,29 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Shopping List</h1>
-        </header>
-        <main>
-            <ul class="shopping-list">
-                <!-- List of items to be bought -->
-            </ul>
-            <a href="#" class="secondary-btn">Add to List</a> <!-- Similar to the above -->
-        </main>
-    </div>
+    <h1>My Shopping List</h1>
+    <ul id="itemList">
+        <li>Cookies</li>
+        <li>Milk</li>
+        <li>Cereal</li>
+        <li>Orange Juice</li>
+    </ul>
+
+    <input type="text" id="newItem" placeholder="Enter a new item">
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+        function addItem() {
+            const newItemText = document.getElementById("newItem").value;
+            if (newItemText) {
+                const itemList = document.getElementById("itemList");
+                const newItem = document.createElement("li");
+                newItem.textContent = newItemText;
+                itemList.appendChild(newItem);
+                document.getElementById("newItem").value = "";
+            }
+        }
+    </script>
 </body>
 
 </html>
