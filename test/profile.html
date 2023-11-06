@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./c.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+</head>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+<body>
+    <div class="container1">
+        <h1>User Personal</h1>
+        <br>
+        <hr>
+        <br>
+        <p id="res"></p>
+        <form>
+            <div class="box">
+                <!-- <link rel="stylesheet", href="c.css"> -->
+                <div class="image-1">
+                    <a href="register.html">
+                        <i class='bx bx-plus'></i>
+                    </a>
+                </div>
+            </div>
+            <table style="width: 100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Occupation</th>
+                    <th>Allergy</th>
+                    <th>Favorite</th>
+                </tr>
+                <tr>
+                    <td>User1</td>
+                    <td>Student</td>
+                    <td>None</td>
+                    <td>Fish</td>
+                </tr>
+                <tr>
+                    <td>User2</td>
+                    <td>Software Developer</td>
+                    <td>Sesame</td>
+                    <td>Taco</td>
+                </tr>
+                <tr>
+                    <td>User3</td>
+                    <td>Engineer</td>
+                    <td>Olive oil</td>
+                    <td>Ice cream</td>
+                </tr>
+
+                <!-- <tr>
+                    <td id="userName">$0</td>
+                    <td id="userJob">$0</td>
+                    <td id="userAllergy">$0</td>
+                    <td id="userFavo">$0</td>
+                    
+                </tr> -->
+                <tbody id="myTable">
+
+                </tbody>
+                
+            </table>
+            <!-- <button type="button" onclick="deleteData()"> OK </button> -->
+            <p>If you want to delete user information, click <a onclick="deleteData()" href="#"> here </a></p>
+            <script>
+
+                
+                    var table = document.getElementById('myTable')
+                    
+                    for(var i = 0; i < localStorage.length/4; i++){
+                        // document.write(localStorage.getItem("user1"))
+                        var row = `<tr>
+                                <td>${localStorage.getItem("name" + (i+1))}</rd>
+                                    <td>${localStorage.getItem("job" + (i+1))}</rd>
+                                        <td>${localStorage.getItem("aller" + (i+1))}</rd>
+                                            <td>${localStorage.getItem("favo" + (i+1))}</rd>
+                            </tr>`
+                            table.innerHTML += row          
+                              }
+                
+                function deleteData(){
+                    var l = localStorage.length;
+                    if(l > 0){
+                        localStorage.clear();
+                        location.reload();
+                    }
+                    else{
+                        alert("There are not new user information")
+                    }
+
+                }
+                // var userName = document.getElementById("user").value;
+                // var userEmail = document.getElementById("email").value;
+                // var yes = document.getElementById("check");
+                var data = window.location.search;
+                var params = new URLSearchParams(data);
+                console.log(params);
+                var userName = params.get("user")
+                var userJob = params.get("job")
+                var userFavo = params.get("favo")
+                var userAllergy = params.get("allergy")
+                
+                var userName = localStorage.getItem("name")
+                var userJob = localStorage.getItem("job")
+                var userFavo = localStorage.getItem("favo")
+                var userAllergy = localStorage.getItem("aller")
+                
+                document.getElementById("userName").innerHTML = userName
+                document.getElementById("userJob").innerHTML = userJob
+                document.getElementById("userFavo").innerHTML = userFavo
+                document.getElementById("userAllergy").innerHTML = userAllergy
+                // document.getElementById("userName").innerHTML = userName
+                // document.getElementById("userJob").innerHTML = userJob
+                // document.getElementById("userFavo").innerHTML = userFavo
+                // document.getElementById("userAllergy").innerHTML = userAllergy
+                // var name = localStorage.setItem(userName, userName);
+
+                    // console.log(data);
+                // document.getElementById("res").innerHTML = data;
+            </script>
+        </form>
+    </div>
+    <!-- <input type="button" value="No, really, go back!" onclick="history.back()"> -->
+
+    <a href="h.html"><button type="back" class="exitT0">Back</button> </a>
+
+</body>
+
+</html>
