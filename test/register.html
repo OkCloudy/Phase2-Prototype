@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="c.css" type="text/css">
+</head>
+
+<body>
+  <!-- <form onsubmit="myfunc()"> -->
+    <form method="GET" action="profile.html">
+    <div class="container">
+      <h1>Upload User Information</h1>
+      <br>
+
+      <p>Please fill your information</p>
+      <hr>
+      <br>
+
+      <div class="input-box">
+        <!-- <div class="input-field"> -->
+          <label for="user"><b>&emsp;User Name</b></label>
+          <div class="input-field">
+          <input type="text" placeholder="Enter User Name" name="user" id="user" required>
+          <i class='bx bxs-user'></i>
+
+        </div>
+      </div>
+      <br>
+
+      <div class="input-box">
+        <label for="job"><b>&emsp;Occupation</b></label>
+        <div class="input-field">
+          <input type="text" placeholder="Enter Your Occupation" name="job" id="job" required>
+          <i class='bx bx-briefcase'></i>
+        </div>
+      </div>
+      <br>
+
+      <div class="input-box">
+        <!-- <div class="input-field"> -->
+          <label for="favo"><b>&emsp;Favorite Food</b></label>
+          <div class="input-field">
+          <input type="text" placeholder="Enter Favorite Food" name="favo" id="favo" required>
+          <i class='bx bxs-baguette'></i>
+
+        </div>
+      </div>
+      <br>
+
+      <div class="input-box">
+        <!-- <div class="input-field"> -->
+
+          <label for="allergy"><b>&emsp;Allergy</b></label>
+          <div class="input-field">
+          <input type="text" placeholder="Enter Allergy Food" name="allergy" id="allergy">
+          <i class='bx bx-food-menu'></i>
+  
+        </div>
+        <!-- </div> -->
+      </div>
+      <br>
+      <div class="input-box">
+        <!-- <div class="input-field"> -->
+
+          <!-- <label for="image"><b>Upload a photo</b></label>
+          <i class='bx bx-image-alt'></i>
+          <input type="file" id="photo" name="photo" accept="image/*">
+           -->
+        <!-- </div> -->
+        <!-- <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+  
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required> -->
+        <button type="submit" class="upload" onclick="openPopup()">Upload</button>
+        <div class="popup" id="popup">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flat_tick_icon.svg/768px-Flat_tick_icon.svg.png">
+          <h2> Thank You!</h2>
+          <p> success </p>
+          <button type="button" onclick="closePopup()"> OK </button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- <label>
+          <input type="checkbox" required id="check"> By creating an account you agree to our <a
+            href="https://proctortrack.com/wp-content/uploads/2022/08/updated-Privacy-policy.png">Terms & Privacy</a>
+        </label> -->
+
+
+        <!-- <dialog>
+          <p> registration success </p>
+        </dialog> -->
+      </div>
+    </div>
+
+  </form>
+
+  <a href="profile.html"><button type="exit" class="exitT0">Exit</button> </a>
+
+
+  <script type="text/javascript">
+    // function showMessage() {
+    // var dialog = document.createElement("dialog");
+    // dialog.innerHTML = "This is a message box.";
+    // dialog.show();
+    // }
+
+    let popup = document.getElementById("popup");
+    function openPopup() {
+      var userName = document.getElementById("user").value;
+      var userJob = document.getElementById("job").value;
+      var userFavo = document.getElementById("favo").value;
+      var userAllergy = document.getElementById("allergy").value;
+      var i = localStorage.length/4 + 1
+      var name = localStorage.setItem("name"+i, userName);
+      var job = localStorage.setItem("job"+i, userJob);
+      var favo = localStorage.setItem("favo"+i, userFavo);
+      var aller = localStorage.setItem("aller"+i, userAllergy);
+
+      // isChecked = false;
+      // if(userEmail != "" && userEmail != "" && yes.checked == true){
+      if (userName && userJob && userFavo && userAllergy) {
+
+        popup.classList.add("open-popup");
+      }
+      // if(isChecked){
+      // }
+      // popup.classList.add("open-popup");
+
+    }
+    function closePopup() {
+      popup.classList.remove("open-popup");
+    }
+    function myfunc() {
+      var userName = document.getElementById("user").value;
+      var userEmail = document.getElementById("email").value;
+      var yes = document.getElementById("check");
+      // <dialog>
+      //     <p> registration success </p>
+      //   </dialog>
+      // document.write("The user name is " + userName);
+      // document.write("The user email is " + userEmail);
+      // if (useAllergy != ""){
+      //   document.write("The user allergy is " + useAllergy);
+      // }
+
+    }
+  </script>
+  <!-- <div class="container signin">
+      <p>Already have an account? <a href="#">Sign in</a>.</p>
+    </div> -->
+
+
+
+  <!-- <script>
+    document.write('<a href="' + document.referrer + '"><button type="exit" class="exitT0">Exit</button></a>');
+  </script> -->
+</body>
+
+</html>
