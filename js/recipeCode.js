@@ -1,4 +1,22 @@
-let recipeArrary = [];
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('.navigation ul li a').
+    forEach(link => {
+        console.log(activePage);
+        console.log(link.href);
+        if (link.href.includes(`${activePage}`)) {
+            link.classList.add("current");
+        }
+    });
+let popUp = document.getElementById("popup");
+
+
+function openPopup() {
+    popUp.classList.add("open-popup");
+}
+
+function closePopup() {
+    window.location.href = 'recipes.html'; // Change to your actual page URL
+}
 
 document.getElementById('recipeForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -25,9 +43,10 @@ document.getElementById('recipeForm').addEventListener('submit', function(event)
   
     console.log('Recipes array after adding new recipe:', recipes);
 
-    // Confirming another recipe to add
-    let anotherRecipe = window.confirm("Recipe added successfully! Do you want to add another recipe?");
-    console.log('User wants to add another recipe:', anotherRecipe);
+
+    // Confirming added recipe to add
+    openPopup();
+    /*
     if (!anotherRecipe) {
         // redirect to main recipe screen
         window.location.href = 'recipes.html'; // Change to your actual page URL
@@ -36,5 +55,6 @@ document.getElementById('recipeForm').addEventListener('submit', function(event)
         // Optionally clear the form or give the user feedback
         document.getElementById('recipeForm').reset();
     }
+    */
   });
-  
+

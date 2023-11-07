@@ -2,29 +2,29 @@ html {
     font-size: 14px;
 }
 
-div.add-recipe {
+.add-recipe {
     position: relative;
     text-align: right;
     margin-right: 1rem;
 }
 
-div.all-recipes {
+.all-recipes {
     border: .3rem solid #636363;
     background-color: #333;
     margin: 1rem;
 }
-div.all-recipes h2 {
+.all-recipes h2 {
     padding-left: 1rem;
     font-size: 1.5rem;
     color: white;
 }
 
-div.image-scroll {
+.image-scroll {
     overflow: auto;
     white-space: nowrap;
 }
 
-div.image-scroll img {
+.image-scroll img {
     color: white;
     border-radius: 8px; /* Rounded Image */
     width: 8rem;    /* Fixed height for all images */
@@ -36,10 +36,10 @@ div.image-scroll img {
 }
 
 
-div.image-scroll img:hover {
+.image-scroll img:hover {
     opacity: 0.5;
 }
-div.image-scroll::-webkit-scrollbar {
+.image-scroll::-webkit-scrollbar {
     display: none; /* Hide scrollbar */
 }
 
