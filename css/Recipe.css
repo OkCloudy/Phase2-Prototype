@@ -2,6 +2,12 @@ html {
     font-size: 14px;
 }
 
+div.add-recipe {
+    position: relative;
+    text-align: right;
+    margin-right: 1rem;
+}
+
 div.all-recipes {
     border: .3rem solid #636363;
     background-color: #333;
