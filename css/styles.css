@@ -112,6 +112,9 @@ footer {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will push the navigation to the bottom */
     position: relative;
     background-color: #F2E9E1;
     border: solid black;
@@ -119,11 +122,19 @@ footer {
     max-width: 640px;
     height: 960px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow for better effect */
-    overflow-y: auto; /* Enables vertical scrolling within the container */
+}
+
+.main-content::-webkit-scrollbar {
+    display: none; /* This will hide the scrollbar in Webkit browsers */
+}
+
+.main-content {
+    flex: 1; /* This will make it fill the available space, pushing the navigation down */
+    overflow-y: auto; /* If you want the content itself to be scrollable */
 }
 
 .navigation {
-    position: sticky;
+    position: relative;
     display: flex;
     align-items: center;
     bottom: 0;
