@@ -21,7 +21,7 @@
         <!-- <div class="input-field"> -->
           <label for="user"><b>&emsp;User Name</b></label>
           <div class="input-field">
-          <input type="text" placeholder="Enter User Name" name="user" id="user" required>
+          <input type="text" placeholder="Enter User Name" name="user" id="user" onclick="" required>
           <i class='bx bxs-user'></i>
 
         </div>
@@ -116,15 +116,21 @@
       var userJob = document.getElementById("job").value;
       var userFavo = document.getElementById("favo").value;
       var userAllergy = document.getElementById("allergy").value;
+      if(userName != "" && userJob != "" && userFavo != ""){
       var i = localStorage.length/4 + 1
       var name = localStorage.setItem("name"+i, userName);
       var job = localStorage.setItem("job"+i, userJob);
       var favo = localStorage.setItem("favo"+i, userFavo);
-      var aller = localStorage.setItem("aller"+i, userAllergy);
-
+      if(userAllergy != ""){
+        var aller = localStorage.setItem("aller"+i, userAllergy);
+      }
+      else{
+        var aller = localStorage.setItem("aller"+i, "None");
+      }
+      }
       // isChecked = false;
       // if(userEmail != "" && userEmail != "" && yes.checked == true){
-      if (userName && userJob && userFavo && userAllergy) {
+      if (userName != "" && userJob != "" && userFavo != "") {
 
         popup.classList.add("open-popup");
       }
