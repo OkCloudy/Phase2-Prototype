@@ -2,21 +2,26 @@ html {
     font-size: 14px;
 }
 
-.add-recipe {
-    position: relative;
-    text-align: right;
-    margin-right: 1rem;
-}
-
 .all-recipes {
+    display: flex; /* Establishes a flex container */
+    justify-content: space-between; /* Places content at the start and end of the container */
+    align-items: center; /* Aligns items vertically in the center */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
     border: .3rem solid #636363;
     background-color: #333;
     margin: 1rem;
 }
+
 .all-recipes h2 {
     padding-left: 1rem;
     font-size: 1.5rem;
     color: white;
+}
+
+.add-recipe {
+    position: relative;
+    float: right;
+    margin-right: 1rem;
 }
 
 .image-scroll {
