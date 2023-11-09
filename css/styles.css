@@ -1,7 +1,6 @@
 /* Global Styles */
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: #F2E9E1;
     color: #2B2D42;
     font-size: 16px;
     margin: 0;
@@ -110,3 +109,174 @@ footer {
     font-size: 16px;
     font-weight: bold;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will push the navigation to the bottom */
+    position: relative;
+    background-color: #F2E9E1;
+    border: solid black;
+    margin: 0 auto;
+    max-width: 640px;
+    height: 960px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow for better effect */
+}
+
+.main-content::-webkit-scrollbar {
+    display: none; /* This will hide the scrollbar in Webkit browsers */
+}
+
+.main-content {
+    flex: 1; /* This will make it fill the available space, pushing the navigation down */
+    overflow-y: auto; /* If you want the content itself to be scrollable */
+}
+
+.navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+}
+
+.navigation ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation ul li {
+    list-style-type: none;
+    width: 25%; /* If you have 4 items, this ensures they distribute evenly */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the flex children (icon and text) horizontally */
+}
+
+.navigation ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the text under the icon */
+    text-decoration: none;
+    color: #222327;
+}
+
+.navigation ul li a .icon {
+    margin-bottom: 0.25rem; /* Adjust as necessary for spacing between icon and text */
+    display: block;
+    text-align: center;
+    transition: 0.5s;
+    font-size: 2rem; /* Adjust icon size as needed */
+}
+
+/* The .text class will place the text under the icon */
+.navigation ul li a .text {
+    transition: 0.5s;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.navigation ul li a.current .icon,
+.navigation ul li a.current .text {
+    color: red;
+    transform: translateY(-8px);
+}
+
+/*
+.navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navigation ul {
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    border: solid black;
+    position: relative;
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    transition: 0.5s;
+    color: #222327;
+}
+
+.navigation ul li:hover a .icon {
+    transform: translateY(-25px);
+}
+
+.navigation ul li a .text {
+    border: solid black;
+    position: absolute;
+    text-align: center;
+    color: #222327;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+   transform: translateY(.1); 
+}
+
+.navigation ul li:hover a .text {
+    opacity: 1;
+     transform: translateY(-50px); 
+}
+*/
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Align with the left edge of the container */
+    right: 0; /* Align with the right edge of the container */
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+  
+  .nav-item {
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .nav-icon {
+    display: block;
+    font-size: 24px; /* Icon size */
+  }
+  
+  .nav-label {
+    display: block;
+    font-size: 12px; /* Label text size */
+    color: #666666; /* Label text color */
+  }

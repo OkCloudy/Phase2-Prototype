@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/addRecipe.css">
+    <script src="../js/recipeCode.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Add Recipe</h1>
+        </header>
+
+        <form id="recipeForm">
+            <input type="text" id="recipeName" placeholder="Recipe Name" required />
+            <input type="number" id="prepTime" placeholder="Preparation Time (minutes)" min="1" required /> <br>
+            <input type="number" id="cookTime" placeholder="Cooking Time (minutes)" min="1" required /> <br>
+            <textarea id="ingredients" placeholder="Ingredients (comma separated)" required></textarea> <br>
+            <!-- Add more fields as needed -->
+            <button type="submit">Add Recipe</button>
+            <div class="popup" id="popup">
+                <img src="../images/404-tick.png" alt="">
+                <h2>Thank You!</h2>
+                <p>Your Recipe was successfully added</p>
+                <button type="button" onclick="closePopup()">Ok</button>
+            </div>
+        </form>
+        
+        <!-- Bottom Navigation Bar -->
+        <div class="navigation"> 
+            <ul>
+                <li class="list">
+                    <a href="../index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="inventory.html">
+                        <span class="icon">
+                            <ion-icon name="albums-outline"></ion-icon>
+                        </span>
+                        <span class="text">Inventory</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="recipes.html">
+                        <span class="icon">
+                            <ion-icon name="list-outline"></ion-icon>
+                        </span>
+                        <span class="text">Recipes</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="account.html">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">Account</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 
+        <nav class="bottom-nav">
+            <a href="/" class="nav-item">
+              <span class="nav-icon">&#8962;</span> 
+              <span class="nav-label">Home</span>
+            </a>
+            <a href="/search" class="nav-item">
+              <span class="nav-icon">&#128270;</span>
+              <span class="nav-label">Search</span>
+            </a>
+            <a href="/history" class="nav-item">
+              <span class="nav-icon">&#128340;</span> 
+              <span class="nav-label">History</span>
+            </a>
+        </nav>
+        --> 
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

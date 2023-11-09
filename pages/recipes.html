@@ -6,20 +6,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/Recipe.css">
+    <script src="../js/recipeCode.js" defer></script>
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <h1>Recipes</h1>
-        </header>
-        <main>
-            <ul class="recipe-list">
-                <!-- List of recipes with ingredients -->
+        <div class="main-content">
+            <!-- Your scrollable content here -->
+            <header>
+                <h1>Recipes</h1>
+            </header>
+
+            <div class="add-recipe">
+                <input type="button" id="add-recipe-button" value="Add Recipe" onclick="window.location.href='addRecipe.html'">
+            </div>
+
+            <div class="all-recipes">
+                <h2>Your Recipes</h2>
+                <div class="image-scroll">
+                    <img src="../images/Garlic-Butter-Steak.jpeg" alt="Description of Image 1">
+                    <img src="../images/spaget.webp" alt="Description of Image 2">
+                    <img src="../images/chicken.jpeg" alt="Description of Image 3">
+                    <img src="../images/FrenchToast.jpeg" alt="Description of Image 3">
+                    <img src="../images/pizza.jpeg" alt="Description of Image 3">
+                    <img src="../images/teriyaki-chicken.jpeg" alt="Description of Image 3">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+        
+            <div class="box-container">
+                <div class="box">
+                    <h3>Recipes with current inventory</h3>
+                    <img src="path_to_image1.jpg" alt="Recipe Image 1">
+                </div>
+                <div class="box">
+                    <h3>Users favorite</h3>
+                    <img src="path_to_image2.jpg" alt="Recipe Image 2">
+                </div>
+                <div class="box">
+                    <h3>Recipies by diet or allergen</h3>
+                    <img src="path_to_image3.jpg" alt="Recipe Image 3">
+                </div>
+                <div class="box">
+                    <h3>Recipes for every skill and every occasion</h3>
+                    <img src="path_to_image4.jpg" alt="Recipe Image 4">
+                </div>
+            </div>        
+
+            <main>
+                <ul class="recipe-list">
+                    <!-- List of recipes with ingredients -->
+                </ul>
+                <a href="#" class="secondary-btn">View Recipe</a> <!-- You can link to a detailed recipe page or use a modal -->
+            </main>
+
+            <h1>YO</h1>
+            <h1>YO</h1>
+            <h1>YO</h1>
+            <h1>YO</h1>
+            <h1>YO</h1>
+            <h1>YO</h1>
+            <h1>YO</h1>
+            <h1>YO</h1>
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <div class="navigation"> 
+            <ul>
+                <li class="list">
+                    <a href="../index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="inventory.html">
+                        <span class="icon">
+                            <ion-icon name="albums-outline"></ion-icon>
+                        </span>
+                        <span class="text">Inventory</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="recipes.html">
+                        <span class="icon">
+                            <ion-icon name="list-outline"></ion-icon>
+                        </span>
+                        <span class="text">Recipes</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="account.html">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">Account</span>
+                    </a>
+                </li>
             </ul>
-            <a href="#" class="secondary-btn">View Recipe</a> <!-- You can link to a detailed recipe page or use a modal -->
-        </main>
+        </div>
+        <!-- 
+        <nav>
+            <button onclick="window.location.href='index.html'">
+                Home
+            </button>
+            <button onclick="window.location.href='pages/inventory.html'">
+                Refrigerator
+            </button>
+            <button onclick="window.location.href='pages/shoppingList.html'">
+                Shopping List
+            </button>
+            <button onclick="window.location.href='pages/recipes.html'">
+                Recipes
+            </button>
+        </nav>
+        
+        <nav class="bottom-nav">
+            <a href="/" class="nav-item">
+              <span class="nav-icon">&#8962;</span> 
+              <span class="nav-label">Home</span>
+            </a>
+            <a href="/search" class="nav-item">
+              <span class="nav-icon">&#128270;</span> 
+              <span class="nav-label">Search</span>
+            </a>
+            <a href="/history" class="nav-item">
+              <span class="nav-icon">&#128340;</span>
+              <span class="nav-label">History</span>
+            </a>
+        </nav>
+    -->
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

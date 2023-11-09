@@ -1,0 +1,84 @@
+html {
+    font-size: 14px;
+}
+
+.add-recipe {
+    position: relative;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.all-recipes {
+    border: .3rem solid #636363;
+    background-color: #333;
+    margin: 1rem;
+}
+.all-recipes h2 {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.image-scroll {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.image-scroll img {
+    color: white;
+    border-radius: 8px; /* Rounded Image */
+    width: 8rem;    /* Fixed height for all images */
+    height: 8rem; /* Fixed height for all images */
+    object-fit: cover; /* Covers area without distorting the aspect ratio */
+    margin-right: .5rem; /* Add some space between the images */
+    margin-left: .5rem; /* Add some space between the images */
+    padding-bottom: .5rem;
+}
+
+
+.image-scroll img:hover {
+    opacity: 0.5;
+}
+.image-scroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/*
+.box {
+    display: inline-block;
+    padding: 1rem;
+    text-align: left;
+    border: .1rem solid black;
+    position: relative;
+    top: 20rem;
+    left: 30rem;
+}
+
+/* Styles for the container */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styles for each box */
+.box {
+    flex: 0 0 calc(50% - 10px); /* Take half of the container width minus some margin */
+    margin-bottom: 20px; /* Space between two rows of boxes */
+   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Optional shadow for a bit of depth */
+    border: 1px solid #ccc; /* Optional border */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box img {
+    max-width: 100%; /* Make sure images don't overflow the box */
+    display: inline-block; /* Remove any spacing below the image */
+    margin-bottom: 10px; /* Space between image and title */
+}
+
+.box h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem;
+    text-align: center; /* Center the title */
+}
