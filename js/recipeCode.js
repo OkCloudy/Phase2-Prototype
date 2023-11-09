@@ -42,10 +42,11 @@ document.getElementById('recipeForm').addEventListener('submit', function(event)
     sessionStorage.setItem('recipes', JSON.stringify(recipes));
   
     console.log('Recipes array after adding new recipe:', recipes);
-
+    
+    window.location.href = 'recipes.html';
 
     // Confirming added recipe to add
-    openPopup();
+   // openPopup();
     /*
     if (!anotherRecipe) {
         // redirect to main recipe screen
