@@ -95,6 +95,38 @@
                         location.reload();
                     }
                     else{
+
+//             </table>
+//             <!-- <button type="button" onclick="deleteData()"> OK </button> -->
+//             <p>If you want to delete new user information, click <a onclick="deleteData()" href="#"> here</a>.</p>
+//             <br>
+//             <br>
+//             <a href="h.html"><button type="back" class="upload">Back</button> </a>
+
+//             <script>
+
+
+//                 var table = document.getElementById('myTable')
+
+//                 for (var i = 0; i < localStorage.length / 4; i++) {
+//                     // document.write(localStorage.getItem("user1"))
+//                     var row = `<tr>
+//                                 <td>${localStorage.getItem("name" + (i + 1))}</rd>
+//                                     <td>${localStorage.getItem("job" + (i + 1))}</rd>
+//                                         <td>${localStorage.getItem("aller" + (i + 1))}</rd>
+//                                             <td>${localStorage.getItem("favo" + (i + 1))}</rd>
+//                             </tr>`
+//                     table.innerHTML += row
+//                 }
+
+//                 function deleteData() {
+//                     var l = localStorage.length;
+//                     if (l > 0) {
+//                         localStorage.clear();
+//                         location.reload();
+//                     }
+//                     else {
+
                         alert("There are not new user information")
                     }
 
@@ -109,12 +141,11 @@
                 var userJob = params.get("job")
                 var userFavo = params.get("favo")
                 var userAllergy = params.get("allergy")
-                
                 var userName = localStorage.getItem("name")
                 var userJob = localStorage.getItem("job")
                 var userFavo = localStorage.getItem("favo")
                 var userAllergy = localStorage.getItem("aller")
-                
+
                 document.getElementById("userName").innerHTML = userName
                 document.getElementById("userJob").innerHTML = userJob
                 document.getElementById("userFavo").innerHTML = userFavo
@@ -125,7 +156,7 @@
                 // document.getElementById("userAllergy").innerHTML = userAllergy
                 // var name = localStorage.setItem(userName, userName);
 
-                    // console.log(data);
+                // console.log(data);
                 // document.getElementById("res").innerHTML = data;
             </script>
         </form>
