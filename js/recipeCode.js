@@ -16,7 +16,8 @@ document.getElementById('recipeForm').addEventListener('submit', function(event)
       name: document.getElementById('recipeName').value,
       prepTime: parseInt(document.getElementById('prepTime').value, 10),
       cookTime: parseInt(document.getElementById('cookTime').value, 10),
-      ingredients: document.getElementById('ingredients').value.split(',')
+      ingredients: document.getElementById('ingredients').value.split(','),
+      favorite: false
       // Add more fields as necessary
     };
 
