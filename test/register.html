@@ -9,6 +9,7 @@
 <body>
   <!-- <form onsubmit="myfunc()"> -->
     <form method="GET" action="../pages/account.html">
+      <!-- action="../pages/account.html" -->
     <div class="container">
       <header>
       <h1>Upload User Information</h1>
@@ -23,7 +24,7 @@
         <!-- <div class="input-field"> -->
           <label for="user"><b>&emsp;User Name</b></label>
           <div class="input-field">
-          <input type="text" placeholder="Enter User Name" name="user" id="user" onclick="" required>
+          <input type="text" placeholder="Enter User Name" name="user" id="user" onclick="">
           <i class='bx bxs-user'></i>
 
         </div>
@@ -33,7 +34,7 @@
       <div class="input-box">
         <label for="job"><b>&emsp;Occupation</b></label>
         <div class="input-field">
-          <input type="text" placeholder="Enter Your Occupation" name="job" id="job" required>
+          <input type="text" placeholder="Enter Your Occupation" name="job" id="job">
           <i class='bx bx-briefcase'></i>
         </div>
       </div>
@@ -43,7 +44,7 @@
         <!-- <div class="input-field"> -->
           <label for="favo"><b>&emsp;Favorite Food</b></label>
           <div class="input-field">
-          <input type="text" placeholder="Enter Favorite Food" name="favo" id="favo" required>
+          <input type="text" placeholder="Enter Favorite Food" name="favo" id="favo">
           <i class='bx bxs-baguette'></i>
 
         </div>
@@ -76,6 +77,10 @@
       <label for="psw-repeat"><b>Repeat Password</b></label>
       <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required> -->
         <button type="submit" class="upload" onclick="openPopup()">Upload</button>
+        <br>
+        <br>
+        <a href="../pages/account.html" class = "button"> Exit </a>
+
         <div class="popup" id="popup">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flat_tick_icon.svg/768px-Flat_tick_icon.svg.png">
@@ -102,7 +107,6 @@
 
   </form>
 
-  <a href="../pages/account.html"><button type="exit" class="exitT0">Exit</button> </a>
 
 
   <script type="text/javascript">
@@ -129,6 +133,9 @@
       else{
         var aller = localStorage.setItem("aller"+i, "None");
       }
+      }
+      else{
+        alert("The name, occupation, and favorite can not be empty")
       }
       // isChecked = false;
       // if(userEmail != "" && userEmail != "" && yes.checked == true){
