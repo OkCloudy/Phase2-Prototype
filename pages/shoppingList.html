@@ -4,34 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping List</title>
+    <title>Shopping list</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/shoppingList.css">
+    <script src="../js/selectBottom.js" defer></script>
 </head>
 
 <body>
-    <h1>My Shopping List</h1>
-    <ul id="itemList">
-        <li>Cookies</li>
-        <li>Milk</li>
-        <li>Cereal</li>
-        <li>Orange Juice</li>
-    </ul>
+    <div class="container">
+        <div class="main-content">
+            <header>
+                <h1>Shopping List</h1>
+            </header>
+            <main>
+                <ul class="item-list">
+                    <li>Carrots <button class="delete-btn">X</button> </li> 
+                    <li>Milk<button class="delete-btn">X</button> </li>
+                    <li>Yogurt<button class="delete-btn">X</button> </li>
+                    <li>Cheese<button class="delete-btn">X</button> </li>
+                    <li>Butter<button class="delete-btn">X</button> </li>
+                    <li>Fish <button class="delete-btn">X</button> </li>
+                    <li>Shrimp <button class="delete-btn">X</button> </li>
+                    <li>Shellfish <button class="delete-btn">X</button> </li>
+                    <li>Raw beef <button class="delete-btn">X</button> </li>
+                    <li>Raw chicken <button class="delete-btn">X</button> </li>
+                    <li>Broccoli <button class="delete-btn">X</button></li>
+                    <li>Bell peppers <button class="delete-btn">X</button></li>
+                    <li>Celery <button class="delete-btn">X</button></li>
+                    <li>Ketchup <button class="delete-btn">X</button></li>
+                </ul>
 
-    <input type="text" id="newItem" placeholder="Enter a new item">
-    <button onclick="addItem()">Add Item</button>
 
-    <script>
-        function addItem() {
-            const newItemText = document.getElementById("newItem").value;
-            if (newItemText) {
-                const itemList = document.getElementById("itemList");
-                const newItem = document.createElement("li");
-                newItem.textContent = newItemText;
-                itemList.appendChild(newItem);
-                document.getElementById("newItem").value = "";
-            }
-        }
-    </script>
+                </div>
+                <a href="shoppingList.html">
+                    <div class="floating-container">
+                        <div class="floating-button">+</div>
+                </a>
+
+                
+            </main>
+        </div>
+
+            <!-- Bottom Navigation Bar -->
+        <div class="navigation"> 
+            <ul>
+                <li class="list">
+                    <a href="../index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="inventory.html">
+                        <span class="icon">
+                            <ion-icon name="albums-outline"></ion-icon>
+                        </span>
+                        <span class="text">Inventory</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="recipes.html">
+                        <span class="icon">
+                            <ion-icon name="list-outline"></ion-icon>
+                        </span>
+                        <span class="text">Recipes</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="account.html">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">Account</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
