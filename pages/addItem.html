@@ -4,50 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping list</title>
+    <title>Add Recipe</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/shoppingList.css">
-    <script src="../js/selectBottom.js" defer></script>
+    <link rel="stylesheet" href="../css/addRecipe.css">
+    <script src="../js/addItem.js" defer></script>
+    <script src="../js/app.js" defer></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="main-content">
-            <header>
-                <h1>Shopping List</h1>
-            </header>
-            <main>
-                <ul class="item-list">
-                    <li>Carrots <button class="delete-btn">X</button> </li> 
-                    <li>Milk<button class="delete-btn">X</button> </li>
-                    <li>Yogurt<button class="delete-btn">X</button> </li>
-                    <li>Cheese<button class="delete-btn">X</button> </li>
-                    <li>Butter<button class="delete-btn">X</button> </li>
-                    <li>Fish <button class="delete-btn">X</button> </li>
-                    <li>Shrimp <button class="delete-btn">X</button> </li>
-                    <li>Shellfish <button class="delete-btn">X</button> </li>
-                    <li>Raw beef <button class="delete-btn">X</button> </li>
-                    <li>Raw chicken <button class="delete-btn">X</button> </li>
-                    <li>Broccoli <button class="delete-btn">X</button></li>
-                    <li>Bell peppers <button class="delete-btn">X</button></li>
-                    <li>Celery <button class="delete-btn">X</button></li>
-                    <li>Ketchup <button class="delete-btn">X</button></li>
-                </ul>
-                <script type="text/javascript" src="../js/deleteRow.js"></script>
+        <header>
+            <h1>Add Item</h1>
+        </header>
 
-
-
-                </div>
-                <a href="addItem.html">
-                    <div class="floating-container">
-                        <div class="floating-button">+</div>
-                </a>
-
-                
-            </main>
-        </div>
-
-            <!-- Bottom Navigation Bar -->
+        <form id="itemForm">
+            <input type="text" id="recipeName" placeholder="Item Name" required />
+            <input type="number" id="quantity" placeholder="Quantity" min="1" required /> <br>
+            <textarea id="notes" placeholder="Additional Notes" required></textarea> <br>
+            <button type="submit">Add Item</button>
+            <div class="popup" id="popup">
+                <img src="../images/404-tick.png" alt="">
+                <h2>Thank You!</h2>
+                <p>Your item was added!</p>
+                <button type="button" onclick="closePopup()">Ok</button>
+            </div>
+        </form>
+        
+        <!-- Bottom Navigation Bar -->
         <div class="navigation"> 
             <ul>
                 <li class="list">
