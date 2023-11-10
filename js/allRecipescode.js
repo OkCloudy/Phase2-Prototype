@@ -3,6 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
   renderRecipes();
 });
 
+let popUp = document.getElementById("popup");
+
+function openPopup(onConfirm) {
+    // Save the callback function to be called later
+    popUp.onConfirm = onConfirm;
+    popUp.classList.add("open-popup");
+  }
+
+function closePopup() {
+    popUp.classList.remove("open-popup");
+}
+
 // This function clears the recipes container and repopulates it with updated list
 function renderRecipes() {
   let recipes = JSON.parse(sessionStorage.getItem("recipes")) || [];
@@ -47,15 +59,18 @@ function renderRecipes() {
       recipeElement.appendChild(ingredientsElement);
 
       // Create a button for deleting the recipe
-      let deleteButton = document.createElement("button");
-      deleteButton.textContent = "Delete";
+      let deleteButton = document.createElement("ion-icon");
+      deleteButton.name = "trash-outline";
       deleteButton.classList.add("delete-recipe");
       deleteButton.onclick = function () {
         // Placeholder for delete functionality
-        recipes.splice(index, 1);
-        sessionStorage.setItem("recipes", JSON.stringify(recipes));
         console.log("Delete recipe at index", index);
-        renderRecipes();
+        openPopup(function() {
+            // This code will be called when the user confirms the deletion
+            recipes.splice(index, 1);
+            sessionStorage.setItem("recipes", JSON.stringify(recipes));
+            renderRecipes();
+          });
       };
       recipeElement.appendChild(deleteButton);
 
@@ -83,6 +98,7 @@ function renderRecipes() {
       };
       recipeElement.appendChild(favoriteIcon);
 
+      /*
       // Create a button for editing the recipe
       let editButton = document.createElement("button");
       editButton.textContent = "Edit";
@@ -92,7 +108,7 @@ function renderRecipes() {
         console.log("Edit recipe at index", index);
         window.location.href = "editRecipe.html"; // Redirect to edit recipe page (you'll need to implement this)
       };
-      recipeElement.appendChild(editButton);
+      recipeElement.appendChild(editButton); */
 
       // Make the entire recipe container clickable
       recipeElement.classList.add("clickable");

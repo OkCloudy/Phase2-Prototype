@@ -21,6 +21,13 @@
                 <h1>All Recipes</h1>
             </header>
 
+            <div class="popup" id="popup">
+                <img src="../images/404-tick.png" alt="">
+                <h2>Are you sure you want to delete your recipe?</h2>
+                <button type="button" onclick="closePopup()">No</button>
+                <button type="button" onclick="if(popUp.onConfirm) popUp.onConfirm(); closePopup();">Yes</button>
+            </div>
+
             <div id="recipes-container">
                 <!-- Recipes will be inserted here -->
             </div>

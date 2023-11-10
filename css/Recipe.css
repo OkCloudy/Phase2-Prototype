@@ -114,7 +114,13 @@ position: relative;
 }
 
 .delete-recipe {
-  /* Styles for delete button */
+  position: absolute;
+  position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    font-size: 24px; /* Adjust icon size as needed */
+    color: inherit; /* The color will be inherited or set via JS */
+    cursor: pointer; /* Indicates the icon is clickable */
 }
 
 .favorite-icon {
