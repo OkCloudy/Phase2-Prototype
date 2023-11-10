@@ -20,10 +20,13 @@
             </header>
 
             <div class="all-recipes">
-                <h2 onclick="window.location.href = 'allRecipes.html'">Your Recipes</h2>
-                <div class="add-recipe">
-                    <input type="button" id="add-recipe-button" value="Add Recipe" onclick="window.location.href='addRecipe.html'">
-                </div>
+                <h2>Your Recipes</h2>
+                <div class="recipe-actions">
+                    <input type="button" class="all-recipes-btn" value="All Recipes" onclick="window.location.href='allRecipes.html'">
+                    <a href="addRecipe.html" id="add-recipe-link">
+                      <img src="../images/add.png" alt="Add Recipe" id="add-recipe-image" />
+                    </a>
+                  </div>
                 <div class="image-scroll">
                     <img src="../images/Garlic-Butter-Steak.jpeg" alt="Description of Image 1">
                     <img src="../images/spaget.webp" alt="Description of Image 2">
@@ -34,32 +37,20 @@
                     <!-- Add more images as needed -->
                 </div>
             </div>
-        
-            <div class="box-container">
-                <div class="box">
-                    <h3>Recipes with current inventory</h3>
-                    <img src="path_to_image1.jpg" alt="Recipe Image 1">
-                </div>
-                <div class="box">
-                    <h3>Users favorite</h3>
-                    <img src="path_to_image2.jpg" alt="Recipe Image 2">
-                </div>
-                <div class="box">
-                    <h3>Recipies by diet or allergen</h3>
-                    <img src="path_to_image3.jpg" alt="Recipe Image 3">
-                </div>
-                <div class="box">
-                    <h3>Recipes for every skill and every occasion</h3>
-                    <img src="path_to_image4.jpg" alt="Recipe Image 4">
-                </div>
-            </div>        
 
-            <main>
-                <ul class="recipe-list">
-                    <!-- List of recipes with ingredients -->
-                </ul>
-                <a href="#" class="secondary-btn">View Recipe</a> <!-- You can link to a detailed recipe page or use a modal -->
-            </main>
+            <div class="tile-container">
+                <div class="tile">Recipes with current inventory
+
+                </div>
+                <div class="tile">
+                    Users favorite</div>
+                <div class="tile">Recipies by diet or allergen
+
+                </div>
+                <div class="tile">Recipes for every skill and every occasion
+
+                </div>
+            </div>
         </div>
 
         <!-- Bottom Navigation Bar -->

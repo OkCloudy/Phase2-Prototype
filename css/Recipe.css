@@ -7,22 +7,50 @@ html {
   justify-content: space-between; /* Places content at the start and end of the container */
   align-items: center; /* Aligns items vertically in the center */
   flex-wrap: wrap; /* Allows items to wrap onto the next line */
-  border: 0.3rem solid #636363;
-  background-color: #333;
   margin: 1rem;
+  background-color: #fff; /* Or any color you want */
+  border: 1px solid #ddd; /* Optional border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .all-recipes h2 {
   padding-left: 1rem;
   font-size: 1.5rem;
-  color: white;
+  color: black;
 }
 
-.add-recipe {
-  position: relative;
-  float: right;
-  margin-right: 1rem;
-}
+.recipe-actions {
+    display: flex; /* Establish flexbox layout */
+    justify-content: flex-end; /* Align children to the end of the container (right) */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .all-recipes-btn {
+    border: 2px black solid; /* No border */
+    background: none; /* No background */
+    padding: 0.5rem; /* Consistent padding for clickable area */
+    cursor: pointer; /* Cursor becomes a pointer hand icon to indicate clickability */
+    margin-left: 1rem; /* Space between the buttons */
+  }
+
+  #add-recipe-link {
+    margin-left: 1rem; /* Space between the buttons */
+    margin-right: .5rem;
+  }
+  
+  #add-recipe-image {
+    width: 35px; /* Preferred size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .all-recipes h2 {
+    /* ... your existing styles ... */
+    cursor: pointer; /* Make the header look clickable */
+  }
+  
+  /* ... your other styles ... */
+  
 
 .image-scroll {
   overflow: auto;
@@ -31,13 +59,14 @@ html {
 
 .image-scroll img {
   color: white;
+  border: 1px solid black;
   border-radius: 8px; /* Rounded Image */
   width: 8rem; /* Fixed height for all images */
   height: 8rem; /* Fixed height for all images */
   object-fit: cover; /* Covers area without distorting the aspect ratio */
   margin-right: 0.5rem; /* Add some space between the images */
   margin-left: 0.5rem; /* Add some space between the images */
-  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .image-scroll img:hover {
@@ -99,12 +128,12 @@ html {
 }
 
 .recipe {
-position: relative; 
-  background: #fff; 
-  border: 1px solid #ccc; 
-  border-radius: 8px; 
-  padding: 15px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .recipe button {
@@ -116,23 +145,21 @@ position: relative;
 .delete-recipe {
   position: absolute;
   position: absolute;
-    bottom: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
-    font-size: 24px; /* Adjust icon size as needed */
-    color: inherit; /* The color will be inherited or set via JS */
-    cursor: pointer; /* Indicates the icon is clickable */
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  font-size: 24px; /* Adjust icon size as needed */
+  color: inherit; /* The color will be inherited or set via JS */
+  cursor: pointer; /* Indicates the icon is clickable */
 }
 
 .favorite-icon {
-    position: absolute;
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
-    font-size: 24px; /* Adjust icon size as needed */
-    color: inherit; /* The color will be inherited or set via JS */
-    cursor: pointer; /* Indicates the icon is clickable */
-  }
-  
-  
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  font-size: 24px; /* Adjust icon size as needed */
+  color: inherit; /* The color will be inherited or set via JS */
+  cursor: pointer; /* Indicates the icon is clickable */
+}
 
 .edit-recipe {
   /* Styles for edit button */
