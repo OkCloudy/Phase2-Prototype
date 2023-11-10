@@ -16,6 +16,27 @@ header {
     font-weight: bold;
 }
 
+.header-logo {
+    height: 100px; 
+    width: auto;
+}
+
+.tile-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.tile {
+    background-color: #fff; /* Or any color you want */
+    border: 1px solid #ddd; /* Optional border */
+    padding: 25px;
+    height: 140px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
 nav ul {
     display: flex;
     justify-content: space-around;
