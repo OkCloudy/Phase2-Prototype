@@ -20,10 +20,14 @@
 </style>
 <body>
     <div class="container1">
-        <h1>User Personal</h1>
+        <header>
+            <h1>User Personal</h1>
+        </header>
         <br>
         <hr>
         <br>
+        <br>
+
         <p id="res"></p>
         <form>
             <div class="box">
@@ -34,7 +38,7 @@
                     </a>
                 </div>
             </div>
-            <table style="width: 100%">
+            <table style="width: 100%" class="table">
                 <tr>
                     <th>Name</th>
                     <th>Occupation</th>
@@ -136,7 +140,46 @@
                 // document.getElementById("res").innerHTML = data;
             </script>
             </form>
+            <div class="navigation"> 
+                <ul>
+                    <li class="list">
+                        <a href="../index.html">
+                            <span class="icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="inventory.html">
+                            <span class="icon">
+                                <ion-icon name="albums-outline"></ion-icon>
+                            </span>
+                            <span class="text">Inventory</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="recipes.html">
+                            <span class="icon">
+                                <ion-icon name="list-outline"></ion-icon>
+                            </span>
+                            <span class="text">Recipes</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="account.html">
+                            <span class="icon">
+                                <ion-icon name="person-outline"></ion-icon>
+                            </span>
+                            <span class="text">Account</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <!-- Bottom Navigation Bar -->
         <!-- <div class="navigation"> 
             <ul>
