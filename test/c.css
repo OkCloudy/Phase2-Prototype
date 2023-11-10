@@ -49,15 +49,32 @@ body {
     /* background-size: cover;  
     position: absolute; */
 }
+header {
+    background-color: #4CAF50;
+    color: #F2E9E1;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 24px;
+    font-weight: bold;
+}
 .container1 {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+     /* This will push the navigation to the bottom */
+    position: relative;
+    background-color: white;
+    border: solid black;
+    margin: 0 auto;
     width: 640px;
     height: 960px;
-    /* width: 100%; */
-    /* height: 100vh;   */
-    /* background: pink; */
-    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow for better effect */
+    
+    /* width: 640px;
+    height: 960px;
+    background: transparent; */
     color: crimson;
-    padding: 30px 40px;
+    /* padding: 30px 40px; */
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -70,11 +87,15 @@ body {
     /* background-size: cover;  
     position: absolute; */
 }
-.container1 h1 {
+/* .container1 .table{
+    padding: 30px 40px;
+
+} */
+/* .container1 h1 {
     color: crimson;
     font-size: 36px;
     text-align: center;
-}
+} */
 /* .form-box{
     width: 400px;
     margin: 50px auto;
@@ -121,7 +142,7 @@ body {
 .container .upload {
     width: 100%;
     height: 45px;
-    background: crimson;
+    background: rgb(79, 79, 221);
     border: none;
     outline: none;
     border-radius: 40px;
@@ -173,8 +194,8 @@ postion of exit button
     zoom: 2;
     color: #000;
     position: absolute;
-    left: 70%;
-    top: 5%;
+    left: 85%;
+    top: 2%;
 
 }
 
@@ -232,4 +253,61 @@ postion of exit button
     position: absolute;
     left: 70%;
     top: 5%;
+}
+
+.navigation {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    /* left: 0; */
+    /* right: 0; */
+    width: 640px;
+    height: 80px;
+    background: white;
+    border-top: 1px solid #333; /* Example color: #333 */
+}
+
+.navigation ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation ul li {
+    list-style-type: none;
+    width: 25%; /* If you have 4 items, this ensures they distribute evenly */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the flex children (icon and text) horizontally */
+}
+
+.navigation ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the text under the icon */
+    text-decoration: none;
+    color: #222327;
+}
+
+.navigation ul li a .icon {
+    margin-bottom: 0.25rem; /* Adjust as necessary for spacing between icon and text */
+    display: block;
+    text-align: center;
+    transition: 0.5s;
+    font-size: 2rem; /* Adjust icon size as needed */
+}
+
+/* The .text class will place the text under the icon */
+.navigation ul li a .text {
+    transition: 0.5s;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.navigation ul li a.current .icon,
+.navigation ul li a.current .text {
+    color: red;
 }
