@@ -8,13 +8,16 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
-    color: #F2E9E1;
+    background-color: #f9dac1; /* Light grey background for a subtle look */
+    color: black; /* Dark grey color for the text to make it look soft */
     text-align: center;
-    padding: 1.5rem 0;
-    font-size: 24px;
+    padding: 1rem 0; /* Slightly less padding for a tighter header */
+    font-size: 20px; /* Slightly smaller font for a sleek look */
     font-weight: bold;
+    border-bottom: 1px solid #e0e0e0; /* Lighter border color for subtlety */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
 }
+
 
 .header-logo {
     height: 100px; 
