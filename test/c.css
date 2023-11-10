@@ -301,3 +301,34 @@ postion of exit button
 .navigation ul li a.current .text {
     color: red;
 }
+
+table,
+    th,
+    td {
+        border-radius: 20px;
+        border-collapse: separate;
+        padding: 10px;
+    }
+
+    table{
+        width: 100%;
+        border: 2px solid crimson;
+        border-style: dashed;
+    }
+
+    th{
+        font-weight: bold;
+        border: 1px solid crimson;
+    }
+
+    td{
+        border: 1px solid crimson;
+    }
+
+    table tr:nth-child(odd){
+        background-color: rgba(36, 152, 65, 0.132);
+    }   
+
+    table tr:nth-child(even){
+        background-color: rgba(36, 152, 65, 0.642)
+    }
