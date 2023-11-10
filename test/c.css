@@ -29,25 +29,25 @@ body {
 
 
 .container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+     /* This will push the navigation to the bottom */
+    position: relative;
+    background-color: white;
+    border: solid black;
+    margin: 0 auto;
     width: 640px;
     height: 960px;
-    /* width: 100%; */
-    /* height: 100vh;   */
-    /* background: pink; */
-    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow for better effect */
+    
+    /* width: 640px;
+    height: 960px;
+    background: transparent; */
     color: crimson;
-    padding: 30px 40px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    /* padding: 30px 40px; */
+    /* border: 2px solid rgba(255, 255, 255, 0.1); */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    /* background-position: center;  */
-    /* background-color:#F2E9E1; */
-    /* background-position: center; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* background-size: cover;  
-    position: absolute; */
 }
 header {
     background-color: #4CAF50;
@@ -75,9 +75,9 @@ header {
     background: transparent; */
     color: crimson;
     /* padding: 30px 40px; */
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    /* border: 2px solid rgba(255, 255, 255, 0.1); */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* background-position: center;  */
     /* background-color:#F2E9E1; */
     /* background-position: center; */
@@ -87,24 +87,14 @@ header {
     /* background-size: cover;  
     position: absolute; */
 }
-/* .container1 .table{
-    padding: 30px 40px;
 
-} */
-/* .container1 h1 {
-    color: crimson;
-    font-size: 36px;
-    text-align: center;
-} */
-/* .form-box{
-    width: 400px;
-    margin: 50px auto;
-    position: relative;
-    border-radius: 30px;
-} */
 .container h1 {
-    font-size: 36px;
+    background-color: #4CAF50;
+    color: #F2E9E1;
     text-align: center;
+    padding: 1.5rem 0;
+    font-size: 29px;
+    font-weight: bold;
 }
 
 .input-field {
@@ -175,9 +165,9 @@ postion of exit button
     /* width:30px;
        height:40px; */
     position: absolute;
-    top: 96%;
-    left: 27.95%;
-    width: 560px;
+    top: 108%;
+    left: 24.7%;
+    width: 638px;
     height: 45px;
     background: crimson;
     border: none;
@@ -262,7 +252,7 @@ postion of exit button
     bottom: 0;
     /* left: 0; */
     /* right: 0; */
-    width: 640px;
+    width: 636px;
     height: 80px;
     background: white;
     border-top: 1px solid #333; /* Example color: #333 */
