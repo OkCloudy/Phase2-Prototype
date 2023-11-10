@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/shoppingList.css">
     <script src="../js/selectBottom.js" defer></script>
+    <script src="../js/modifyShoppingList.js" defer></script>
+
 </head>
 
 <body>
@@ -17,7 +19,21 @@
                 <h1>Shopping List</h1>
             </header>
             <main>
-                <ul class="item-list">
+
+                <div class="form-popup" id="myForm">
+                    <form class="form-container">
+                      <h1>Add new item</h1>
+                  
+                      <label for="Item"><b>Item name</b></label>
+                      <input id="item-input" type="text" placeholder="Enter item" name="Item" required>
+                        <div class="button-container">
+                            <button type="button" class="btn" onclick="closeForm()">Submit</button>
+                            <button type="button" class="btn cancel" onclick="closeFormCancel()">Cancel</button>
+                        </div>
+                    </form>
+                  </div>
+
+                <ul class="item-list" id = "item-list">
                     <li>Carrots <button class="delete-btn">X</button> </li> 
                     <li>Milk<button class="delete-btn">X</button> </li>
                     <li>Yogurt<button class="delete-btn">X</button> </li>
@@ -33,15 +49,16 @@
                     <li>Celery <button class="delete-btn">X</button></li>
                     <li>Ketchup <button class="delete-btn">X</button></li>
                 </ul>
-                <script type="text/javascript" src="../js/deleteRow.js"></script>
 
 
 
                 </div>
-                <a href="addItem.html">
+                <!-- <a href="addItem.html"> -->
                     <div class="floating-container">
-                        <div class="floating-button">+</div>
-                </a>
+                        <div class="floating-button" onclick="openForm()">+</div>
+                <!-- </a> -->
+
+
 
                 
             </main>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/inventory.css">
     <script src="../js/selectBottom.js" defer></script>
+    <script src="../js/modifyInventory.js" defer></script>
 </head>
 
 <body>
@@ -17,7 +18,20 @@
                 <h1>Refrigerator Contents</h1>
             </header>
             <main>
-                <ul class="item-list">
+                <div class="form-popup" id="myForm">
+                    <form class="form-container">
+                      <h1>Add new item</h1>
+                  
+                      <label for="Item"><b>Item name</b></label>
+                      <input id="item-input" type="text" placeholder="Enter item" name="Item" required>
+                        <div class="button-container">
+                            <button type="button" class="btn" onclick="closeForm()">Submit</button>
+                            <button type="button" class="btn cancel" onclick="closeFormCancel()">Cancel</button>
+                        </div>
+                    </form>
+                  </div>
+
+                <ul class="item-list" id = "item-list">
                     <li>Carrots <button class="detail-btn">details</button></li> 
                     <li>Raw pork <button class="detail-btn">details</button></li>
                     <li>Strawberries <button class="detail-btn">details</button> </li>
@@ -45,9 +59,9 @@
                 </div>
                 <div class="floating-container">
 
-                    <a href="additem.html">
-                            <div class="floating-button">+</div>
-                    </a>
+
+                    <div class="floating-button" onclick="openForm()">+</div>
+
                 <a href="shoppingList.html">
                         <div class="floating-button2" >S</div>
 
